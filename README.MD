@@ -9,7 +9,7 @@ pod init
 nano Podfile
 ```
 
-replace your Podfile with this after `target 'WhatEverYourProjectNameIs'  :
+replace your Podfile with this after `target 'WhatEverYourProjectNameIs' :
 
 ```
 rn_path = '../node_modules/react-native'
@@ -44,10 +44,10 @@ post_install do |installer|
     end
   end
 end
-
 ```
 
 Then run:
+
 ```
 pod install
 ```
@@ -55,6 +55,7 @@ pod install
 Meanwhile get key from: https://developers.google.com/maps/documentation/ios-sdk/get-api-key
 
 Add to AppDelegate.m:
+
 ```
 + @import GoogleMaps; //add this line
 @implementation AppDelegate
@@ -67,6 +68,7 @@ Add to AppDelegate.m:
 ```
 
 Minimal App.js:
+
 ```
 import React, { Component } from 'react';
 import {
@@ -74,7 +76,7 @@ import {
 } from 'react-native';
 import MapView from 'react-native-maps';
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
     return (
       <MapView
@@ -94,4 +96,6 @@ export default class App extends Component<{}> {
         />
       </MapView>
     );
+  }
+}
 ```
